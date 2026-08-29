@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spot My Mac — Your brand on a founder's MacBook</title>
+  <meta name="description"
+    content="Your logo travels with me on a founder's best friend: the MacBook. Bid for a sticker spot on the lid and get your brand seen in cafés, coworking spaces, and events." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <div class="nav-logo-mark">
+          <svg width="26" height="18" viewBox="0 0 26 18" fill="none">
+            <rect width="26" height="18" rx="4" fill="#1D1D1F" />
+            <rect x="4" y="4" width="8" height="10" rx="1.5" fill="white" opacity=".9" />
+            <rect x="14" y="4" width="8" height="4" rx="1.5" fill="white" opacity=".5" />
+            <rect x="14" y="10" width="8" height="4" rx="1.5" fill="white" opacity=".5" />
+          </svg>
+        </div>
+        <span class="nav-brand-name">Spot My Mac</span>
+      </div>
+      <div class="nav-links">
+        <a href="#auction" class="nav-link">Live auction</a>
+        <a href="#how-it-works" class="nav-link">How it works</a>
+        <a href="#the-machine" class="nav-link">The machine</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="/build" class="nav-link">HOW IT'S BUILT ↗</a>
+      </div>
+      <div class="nav-actions">
+        <div class="currency-toggle">
+          <button class="currency-btn active" id="btn-eur">€</button>
+          <button class="currency-btn" id="btn-usd">$</button>
+        </div>
+        <button class="btn-primary" id="nav-cta">Get a spot</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">Your brand spot, on my Mac.</h1>
+      <p class="hero-subtitle">Your logo travels with me, wherever this MacBook goes.</p>
+
+      <!-- Progress -->
+      <div class="hero-progress">
+        <div class="progress-stats" style="justify-content: space-between; display: none;">
+          <div>
+            <span class="progress-amount" id="raised-amount">0 €</span>
+            <span class="progress-label">sold</span>
+          </div>
+          <div>
+            <span class="progress-goal" id="progress-goal">$3,323 total</span>
+          </div>
+        </div>
+        <div class="progress-bar-wrap" style="display: none;">
+          <div class="progress-bar" id="progress-bar" style="width: 0%;"></div>
+        </div>
+        <p class="progress-timer">Auction ends in <span id="countdown">14d 0h 00m</span> · you can still outbid any
+          spot</p>
+      </div>
+
+      <div class="live-analytics">
+        <span class="live-dot-small"></span>
+        <span id="active-count">1</span> PEOPLE VISITING THIS SITE NOW &middot; <span id="total-count">1</span> TOTAL
+      </div>
+
+      <!-- Blueprint Box -->
+      <div class="blueprint-box">
+        <div class="blueprint-header">
+          <div class="bp-col">
+            <span class="bp-label">SHEET</span>
+            <span class="bp-val">01 / 01</span>
+          </div>
+          <div class="bp-col">
+            <span class="bp-label">DRAWING</span>
+            <span class="bp-val">MacBook lid layout</span>
+          </div>
+          <div class="bp-col">
+            <span class="bp-label">SUBJECT</span>
+            <span class="bp-val">Sponsor Positions</span>
+          </div>
+          <div class="bp-col">
+            <span class="bp-label">SCALE</span>
+            <span class="bp-val">NTS</span>
+          </div>
+          <div class="bp-col bp-col-right">
+            <span class="bp-label">POSITIONS</span>
+            <span class="bp-val">11</span>
+          </div>
+        </div>
+
+        <!-- MacBook visual -->
+        <div class="macbook-wrap">
+          <div class="macbook-lid">
+
+            <!-- ── Spot layout from Figma (absolute, 860×597 reference) ── -->
+
+            <!-- ROW 1: three large spots across the top -->
+            <div class="spot fspot fspot-tl" data-id="1" data-name="Top left" data-size="L" data-bid="418"
+              data-holder="" data-bids="0">
+              <div class="spot-inner">
+                <div class="spot-price" data-price="418">$418</div>
+              </div>
+            </div>
+            <div class="spot fspot fspot-tc" data-id="2" data-name="Top center" data-size="L" data-bid="660"
+              data-holder="" data-bids="0">
+              <div class="spot-inner">
+                <div class="spot-price" data-price="660">$660</div>
+              </div>
+            </div>
+            <div class="spot fspot fspot-tr" data-id="3" data-name="Top right" data-size="L" data-bid="418"
+              data-holder="" data-bids="0">
+              <div class="spot-inner">
+                <div class="spot-price" data-price="418">$418</div>
+              </div>
+            </div>
+
+            <!-- ROW 2: two small left, one wide center, two small right -->
+            <div class="spot fspot fspot-ml1" data-id="4" data-name="Mid left A" data-size="S" data-bid="139"
+              data-holder="" data-bids="0">
+              <div class="spot-inner">
+                <div class="spot-price" data-price="139">$139</div>
+              </div>
+            </div>
+            <div class="spot fspot fspot-ml2" data-id="5" data-name="Mid left B" data-size="S" data-bid="157"
+              data-holder="" data-bids="0">
+              <div class="spot-inner">
+                <div class="spot-price" data-price="157">$157</div>
+              </div>
+            </div>
+            <div class="spot fspot fspot-mc" data-id="6" data-name="Center — beside Apple logo" data-size="L"
+              data-bid="555" data-holder="" data-bids="0">
+              <div class="spot-inner">
+                <div class="spot-price" data-price="555">$555</div>
+              </div>
+            </div>
+            <div class="spot fspot fspot-mr1" data-id="7" data-name="Mid right A" data-size="S" data-bid="157"
+              data-holder="" data-bids="0">
+              <div class="spot-inner">
+                <div class="spot-price" data-price="157">$157</div>
+              </div>
+            </div>
+            <div class="spot fspot fspot-mr2" data-id="8" data-name="Mid right B" data-size="S" data-bid="139"
+              data-holder="" data-bids="0">
+              <div class="spot-inner">
+                <div class="spot-price" data-price="139">$139</div>
+              </div>
+            </div>
+
+            <!-- ROW 3: three large spots across the bottom -->
+            <div class="spot fspot fspot-bl" data-id="9" data-name="Bottom left" data-size="L" data-bid="209"
+              data-holder="" data-bids="0">
+              <div class="spot-inner">
+                <div class="spot-price" data-price="209">$209</div>
+              </div>
+            </div>
+            <div class="spot fspot fspot-bc" data-id="10" data-name="Bottom center" data-size="L" data-bid="261"
+              data-holder="" data-bids="0">
+              <div class="spot-inner">
+                <div class="spot-price" data-price="261">$261</div>
+              </div>
+            </div>
+            <div class="spot fspot fspot-br" data-id="11" data-name="Bottom right" data-size="L" data-bid="210"
+              data-holder="" data-bids="0">
+              <div class="spot-inner">
+                <div class="spot-price" data-price="210">$210</div>
+              </div>
+            </div>
+
+            <!-- Apple logo placeholder -->
+            <div class="apple-logo">
+              <svg viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.08 14.85c-.03-3.27 2.67-4.87 2.79-4.95-1.52-2.22-3.88-2.52-4.72-2.56-2-.21-3.93 1.19-4.95 1.19-1.02 0-2.58-1.17-4.24-1.14-2.17.03-4.18 1.27-5.3 3.2-2.27 3.93-.58 9.76 1.63 12.95 1.08 1.56 2.37 3.31 4.06 3.25 1.63-.07 2.25-1.05 4.22-1.05 1.97 0 2.54 1.05 4.27 1.02 1.75-.03 2.87-1.59 3.94-3.16 1.23-1.81 1.74-3.55 1.77-3.64-.04-.02-3.43-1.31-3.47-5.21zM16.77 5.17C17.66 4.1 18.27 2.6 18.1.98c-1.39.06-3.08.93-4.07 2.07-.89 1.02-1.66 2.56-1.45 4.06 1.53.12 3.1-.78 4.19-1.94z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+
+          </div>
+          <div class="macbook-base"></div>
+        </div>
+      </div>
+
+      <!-- CTA row -->
+      <div class="hero-cta-row">
+        <p class="hero-tagline">I'm financing my first MacBook Pro by selling the one surface everyone sees: the lid.
+        </p>
+        <p class="hero-tagline-sub">Cafe, coworking spaces,travel, events… get your brand in the outside world</p>
+        <div class="hero-buttons">
+          <button class="btn-primary btn-lg" id="hero-cta">Get a spot</button>
+          <a href="#how-it-works" class="btn-link">How it works ›</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DARK SECTION (The Machine) -->
+  <section class="dark-section" id="the-machine">
+    <div class="dark-inner">
+      <div class="dark-intro">
+        <h2 class="dark-title">
+          Everyone recognises the apple.<span class="dark-title-muted"> Show your logo right next to it.</span>
+        </h2>
+        <div class="scroll-hint">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect x="8" y="3" width="8" height="14" rx="4" stroke="rgba(255,255,255,.4)" stroke-width="1.5" />
+            <path d="M12 17v4M8 21h8" stroke="rgba(255,255,255,.4)" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+      <div class="machine-specs">
+        <div class="specs-grid">
+          <div class="spec-card">
+            <h3>MacBook Pro 14"</h3>
+            <p>M5 Pro Chip (15-core CPU, 16-core GPU, 16-core Neural Engine)</p>
+          </div>
+          <div class="spec-card">
+            <h3>Memory & Storage</h3>
+            <p>24GB RAM · 1TB SSD</p>
+          </div>
+          <div class="spec-card">
+            <h3>Color</h3>
+            <p>Silver (Standard Glass)</p>
+          </div>
+        </div>
+        <div class="specs-desc">
+          <p>Here are the exact specs.The MacBook itself costs $3,139.04, but payment
+            processing and taxes take a small cut before I can buy it, so the actual funding goal is around $3,323.</p>
+          <p class="specs-note">Priced in Indian rupees at Apple India, where I’ll be buying it. The dollar amounts
+            shown on this page are converted from the INR price. <a
+              href="https://www.apple.com/in/shop/buy-mac/macbook-pro/14-inch-silver-standard-display-apple-m5-pro-chip-15-core-cpu-16-core-gpu-24gb-memory-1tb-storage"
+              target="_blank">Check the price at Apple</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUCTION TABLE -->
+  <section class="auction-section" id="auction">
+    <div class="auction-inner">
+      <div class="auction-status">
+        <span class="live-dot"></span>
+        <span class="auction-status-text">Live auction — 0 of 11 sticker spots taken ·&nbsp;</span>
+        <span>ends in <span id="countdown2">14d 0h 0m</span></span>
+      </div>
+      <h2 class="section-title">The auction, live.</h2>
+      <p class="section-sub">Every spot shows its current top bid.</p>
+      <p class="section-note">Spots from <strong>125 €</strong> Small · <strong>200 €</strong> Medium · <strong>400
+          €</strong> Large, with a premium next to and around the Apple logo.</p>
+
+      <div class="table-wrap">
+        <table class="auction-table" id="auction-table">
+          <thead>
+            <tr>
+              <th class="col-spot">Spot</th>
+              <th class="col-size">Size</th>
+              <th class="col-holder">Held by</th>
+              <th class="col-bid">Current bid</th>
+              <th class="col-action"></th>
+            </tr>
+          </thead>
+          <tbody id="auction-tbody">
+            <!-- Rows injected by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section" id="how-it-works">
+    <div class="how-inner">
+      <h2 class="section-title">How it works.</h2>
+      <p class="section-sub">Simple, transparent, and one-of-a-kind.</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3 class="step-title">Pick a spot</h3>
+          <p class="step-desc">Browse the 10 sticker zones on the lid. Each has a size, location, and a live top bid.
+            Choose the one that fits your brand.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3 class="step-title">Place your bid</h3>
+          <p class="step-desc">Enter an amount above the current top bid. If someone outbids you before the auction
+            ends, you're notified and can counter.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3 class="step-title">Win & send your logo</h3>
+          <p class="step-desc">Auction closes, top bidder wins. Pay securely, send your logo file, and I'll have a
+            professional sticker printed and applied to the lid.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h3 class="step-title">Travel with me</h3>
+          <p class="step-desc">Your brand goes everywhere my Mac goes — cafés, coworking spaces, conferences, and
+            flights. Real-world impressions, every day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="faq-inner">
+      <h2 class="section-title">Questions & Answers</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-q">Is this real?</summary>
+          <p class="faq-a">Completely. The MacBook is real (well, imminent), the stickers are real vinyl, and I will
+            travel with it and work with it in public spaces. The only fictional thing is the idea that a laptop lid
+            isn't premium ad inventory.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Why this MacBook?</summary>
+          <div class="faq-a">
+            <p>In short: I need a new laptop + I'm building for iOS = MacBook.</p>
+            <p>I've been indie hacking for a year and a half now, pretty limited by my old dying laptop whenever I
+              wanted to go somewhere.</p>
+            <p>I've also started building mobile apps at the beginning of 2026, and building for iOS without a Mac is
+              just the worst (still making some money from them right now). I'd like to finally be able to build in
+              Swift too.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">What do I actually get?</summary>
+          <div class="faq-a">
+            <p>Your brand showing up both on socials and in the real world:</p>
+            <ul>
+              <li>A die-cut vinyl sticker of your logo on the lid of the laptop = visible in public spaces + in my
+                photos/vlogs</li>
+              <li>A spot on this page with a link to your site</li>
+            </ul>
+            <p>I can't promise you impressions or ROI, just that it goes where I work and appears in some of the stuff I
+              post.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">How does payment work?</summary>
+          <p class="faq-a">Bidding takes a 20% deposit (minimum 10 €), paid by card when you place the bid. If you don't
+            win, it comes back in full, automatically. If you do, it counts toward the price and I send a payment link
+            for the remainder. Bids are settled in euros; the dollar prices shown are indicative.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">What if someone outbids me?</summary>
+          <p class="faq-a">You get an honorable mention in the bid history and the chance to swing back. Outbids need to
+            beat the current bid by at least 10 €.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Can any brand join?</summary>
+          <p class="faq-a">Almost. Every sponsor is approved by hand before anything appears, and I keep the final say
+            on what goes on the lid — it travels with me, after all. If your bid is refused, your deposit comes back in
+            full.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Why not just buy the MacBook?</summary>
+          <p class="faq-a">I've been needing one for months, MRR is increasing but I'm still far from being able to
+            afford it at the moment. If this flops, I'll just keep waiting until the day I can get one, but you won't be
+            on it then.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Can I do this with my own laptop?</summary>
+          <p class="faq-a">That is the most asked question in the replies, so yes — I'm building it. You set your
+            machine and your prices; the sticker spots, the auction, and everything else is handled for you.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-creator">
+    <div class="footer-creator-inner">
+      <div class="creator-bio">
+        <img src="https://ui-avatars.com/api/?name=H&background=E5E7EB&color=374151&size=100&rounded=true" alt="Hukam"
+          class="creator-avatar" />
+        <div class="creator-text">
+          <p class="creator-greeting">Hey, I'm Hukam 👋</p>
+          <p class="creator-desc">
+            Motion designer making things move. Building in public and experimenting with ideas. Questions, or want a
+            spot? <a href=https://x.com/hukamdesign>Find me on
+              X</a>
+          </p>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <div class="footer-bottom-links">
+          <a href="#auction">Spots</a>
+          <a href="#" id="open-policy" style="margin-left:16px;">Content & Sponsorship Policy</a>
+        </div>
+        <p class="footer-legal">Spots my Macbook is not affiliated with, endorsed by, or sponsored by Apple Inc. MacBook
+          is a trademark of Apple Inc.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BID MODAL -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal new-modal" id="bid-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+
+      <!-- Header -->
+      <div class="modal-header">
+        <h2 class="modal-title" id="modal-title">Spot 1 · Top left</h2>
+        <p class="modal-subtitle" id="modal-subtitle">Large sticker · 9.5 × 5.5 cm</p>
+        <p class="modal-status">
+          Current bid <strong id="modal-current-bid">1 200 €</strong> <span id="modal-current-holder">by Postiz · 6
+            bids</span>
+        </p>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+
+        <!-- Bid Input -->
+        <div class="form-group">
+          <label id="modal-currency-label">Your bid (USD)</label>
+          <div class="modal-input-wrap">
+            <span class="modal-currency-icon" id="modal-currency-icon">$</span>
+            <input type="number" class="modal-input" id="bid-amount" placeholder="0" min="0" />
+          </div>
+          <p class="modal-hint" id="modal-hint">Minimum 1 210 €</p>
+        </div>
+
+        <div class="deposit-box">
+          <div class="deposit-row">
+            <span id="deposit-text-1">Deposit, 20% of $0</span>
+            <span id="deposit-val-1">$0</span>
+          </div>
+          <div class="deposit-row due-now">
+            <strong>Due now</strong>
+            <strong id="deposit-val-2">$0</strong>
+          </div>
+          <p class="deposit-legal">Refunded in full if you don't win. If you do, the remaining <span id="deposit-rem">$0</span> is charged to the same card when the auction closes.</p>
+        </div>
+
+
+
+        <!-- Details -->
+        <div class="form-row">
+          <div class="form-group">
+            <label>Brand name</label>
+            <input type="text" id="brand-name" class="modal-input" placeholder="Microsoft" required />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email" class="modal-input" placeholder="you@microsoft.com" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Website <span>(optional)</span></label>
+            <input type="url" id="website" class="modal-input" placeholder="https://microsoft.com" />
+          </div>
+          <div class="form-group">
+            <label>X handle <span>(optional)</span></label>
+            <input type="text" id="x-handle" class="modal-input" placeholder="@microsoft" />
+          </div>
+        </div>
+
+        <!-- Logo -->
+        <div class="form-group">
+          <label>Logo</label>
+          <input type="file" id="logo-file" accept=".png,.jpg,.jpeg,.svg" style="display: none;" />
+          <div class="logo-upload" id="logo-upload-zone">
+            <svg id="logo-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M10 3v10m-3.5-3.5L10 13l3.5-3.5M5 17h10" stroke="#56565C" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="upload-title" id="logo-title">Upload your logo</span>
+            <span class="upload-sub" id="logo-sub">PNG · JPG · SVG</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer">
+        <button class="btn-primary btn-full" id="modal-submit">OUTBID</button>
+        <p class="modal-legal">I check every logo by hand before it goes on the lid.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- POLICY MODAL -->
+  <div class="modal-overlay" id="policy-modal-overlay">
+    <div class="modal new-modal" role="dialog" aria-modal="true" style="max-width: 500px;">
+      <button class="modal-close" id="policy-modal-close" aria-label="Close">✕</button>
+      <div class="modal-header">
+        <h2 class="modal-title" style="font-size: 20px;">Content & Sponsorship Moderation Policy</h2>
+      </div>
+      <div class="modal-body" style="padding: 24px;">
+        <p style="color: #aaa; line-height: 1.6; font-size: 15px; margin: 0;">
+          All sponsorship submissions are manually reviewed before approval. We may reject logos, brands, websites, or promotional content that is illegal, misleading, offensive, sexually explicit, or promotes regulated or prohibited products or services. We also reserve the right to reject any sponsorship that does not fit the purpose or standards of Spot My Mac.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <!-- Vercel Web Analytics (plain HTML) — https://vercel.com/docs/analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+
+</html>
